@@ -1,4 +1,6 @@
-# advancednodeexpress
+# Node Sample Project with advanced features
+
+A complete NodeJS project with ES6 features and express(Inversify) 
 
 A sample project to explaining some advanced features of Node JS
 
