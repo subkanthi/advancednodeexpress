@@ -7,6 +7,10 @@
 var app = require('./app');
 var debug = require('debug')('advancednodeexpress:server');
 var http = require('http');
+var configLoader = require('./config/ConfigLoader.js');
+
+// Load Node-config
+//let configLoader = new ConfigLoader();
 
 /**
  * Get port from environment and store in Express.

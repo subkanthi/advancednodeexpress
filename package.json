@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/www.js",
+    "start": "node --harmony ./src/www.js",
     "build": "babel src --out-dir bin"
   },
   "dependencies": {
