@@ -10,7 +10,9 @@ var http = require('http');
 var configLoader = require('./config/ConfigLoader.js');
 
 // Load Node-config
-//let configLoader = new ConfigLoader();
+let config = new configLoader();
+
+console.log(config.get('database.hostName'));
 
 /**
  * Get port from environment and store in Express.

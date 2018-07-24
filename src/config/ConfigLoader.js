@@ -1,22 +1,32 @@
+var config  = require('config');
+
+/**
+ * Wrapper Class to wrap node-config.
+ * Just to make sure application doesnt have to be modified
+ * if node-config library is replaced with an alternative
+ */
 class ConfigLoader {
 
     constructor() {
-        console.log("Config loader called");
-        // Presuming that node-config sits under ./external folder in the project
-        require.paths.unshift('./conf');
 
-        var conf = require('node-config'),sys = require('sys')
-
-        conf.initConfig(
-            function(err) {
-                if(err) {
-                    sys.log('Unable to init the config: ' + err); 
-                    return;
-                }
-                console.log(conf.db_connection);
-            }
-        );
     }
+
+    /**
+     * Function to check if the value exists.
+     * true if exists, false otherwise
+     * @param {} key 
+     */
+    hasValue(key) {
+        return config.has(key);
+    }
+
+    /**
+     * Function to get the value for key
+     */
+    get(key) {
+        return config.get(key);
+    }
+
 }
 
 module.exports = ConfigLoader
