@@ -14,6 +14,8 @@ let config = new configLoader();
 
 console.log(config.get('database.hostName'));
 
+console.log(config.get('sessionDatabase.hostName'));
+
 /**
  * Get port from environment and store in Express.
  */

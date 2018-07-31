@@ -1,6 +1,10 @@
 {
     "database": {
-        "hostName": "localhost",
+        "hostName": "127.0.0.1",
         "portNumber": 27017
+    },
+    "sessionDatabase": {
+        "hostName": "localhost",
+        "portNumber": 27028
     }
 }
